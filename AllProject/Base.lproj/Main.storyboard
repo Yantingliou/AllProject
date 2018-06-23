@@ -22,14 +22,20 @@
                                 <rect key="frame" x="30" y="114" width="315" height="503"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNr-BO-aaf">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="251.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="252"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jD9-MW-oeC">
-                                                <rect key="frame" x="0.0" y="191.5" width="315" height="60"/>
+                                                <rect key="frame" x="0.0" y="192" width="315" height="60"/>
+                                                <color key="backgroundColor" red="1" green="0.69024566720000002" blue="0.77028430219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="1qT-Ei-kdM"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="生活繳費">
+                                                    <color key="titleColor" red="0.099748932329999998" green="0.086071016350000001" blue="0.11195272840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="mZK-2i-sse" kind="show" id="JA6-b5-2uJ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -40,11 +46,27 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFQ-4a-15i">
-                                        <rect key="frame" x="0.0" y="251.5" width="315" height="60"/>
+                                        <rect key="frame" x="0.0" y="252" width="315" height="60"/>
+                                        <color key="backgroundColor" red="0.43330913609999999" green="0.76161960660000005" blue="0.40921021829999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="5wR-P0-q9R"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="叫車">
+                                            <color key="titleColor" red="0.099748932329999998" green="0.086071016350000001" blue="0.11195272840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Anc-Ip-2ku" kind="show" id="R57-RF-5VC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uj-G9-sfv">
+                                        <rect key="frame" x="0.0" y="312" width="315" height="60"/>
+                                        <color key="backgroundColor" red="0.43676453250000002" green="0.79888946449999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="AGd-Ch-YIG"/>
+                                        </constraints>
+                                        <state key="normal" title="查詢紫外線">
+                                            <color key="titleColor" red="0.099748932329999998" green="0.086071016350000001" blue="0.11195272840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -54,11 +76,14 @@
                                     <constraint firstAttribute="trailing" secondItem="jD9-MW-oeC" secondAttribute="trailing" id="5zU-eV-x3P"/>
                                     <constraint firstAttribute="trailing" secondItem="gFQ-4a-15i" secondAttribute="trailing" id="7qk-YU-1W4"/>
                                     <constraint firstItem="lNr-BO-aaf" firstAttribute="leading" secondItem="WhN-XB-fcx" secondAttribute="leading" id="89W-Fw-iNW"/>
+                                    <constraint firstItem="3uj-G9-sfv" firstAttribute="leading" secondItem="gFQ-4a-15i" secondAttribute="leading" id="9Yf-Ul-wDa"/>
                                     <constraint firstItem="lNr-BO-aaf" firstAttribute="top" secondItem="WhN-XB-fcx" secondAttribute="top" id="Ch5-MA-67D"/>
                                     <constraint firstItem="jD9-MW-oeC" firstAttribute="leading" secondItem="WhN-XB-fcx" secondAttribute="leading" id="JIa-Tm-1oy"/>
                                     <constraint firstItem="lNr-BO-aaf" firstAttribute="height" secondItem="WhN-XB-fcx" secondAttribute="height" multiplier="0.5" id="KhG-8S-B71"/>
                                     <constraint firstItem="gFQ-4a-15i" firstAttribute="top" secondItem="lNr-BO-aaf" secondAttribute="bottom" id="UGc-Rt-7dJ"/>
                                     <constraint firstAttribute="trailing" secondItem="lNr-BO-aaf" secondAttribute="trailing" id="ZnP-eo-1aM"/>
+                                    <constraint firstItem="3uj-G9-sfv" firstAttribute="top" secondItem="gFQ-4a-15i" secondAttribute="bottom" id="cZb-xg-ZuG"/>
+                                    <constraint firstItem="3uj-G9-sfv" firstAttribute="trailing" secondItem="gFQ-4a-15i" secondAttribute="trailing" id="nJC-ol-baa"/>
                                     <constraint firstItem="lNr-BO-aaf" firstAttribute="width" secondItem="WhN-XB-fcx" secondAttribute="width" id="sgy-8h-BY0"/>
                                 </constraints>
                             </view>
@@ -77,6 +102,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--生活繳費-->
+        <scene sceneID="vED-03-t36">
+            <objects>
+                <viewController id="mZK-2i-sse" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TBu-Du-RNK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="lsB-rm-zmH"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="生活繳費" id="xJ9-Cb-gmo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uil-a5-l3o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1270" y="-51"/>
+        </scene>
+        <!--叫車服務-->
+        <scene sceneID="olQ-EP-1hI">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2K5-Al-FW9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Anc-Ip-2ku" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nk8-Xm-3Ra">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Zg9-ze-6te"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="叫車服務" id="BbB-d2-Shv"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1206" y="729"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E5y-L1-zhB">
