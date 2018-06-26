@@ -904,6 +904,213 @@
             </objects>
             <point key="canvasLocation" x="78" y="2420"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="oeN-6C-eSJ">
+            <objects>
+                <viewController id="rmu-68-QJc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="92N-O3-OaN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4qb-UK-wjM">
+                                <rect key="frame" x="37.5" y="258.5" width="300" height="170"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上車確認" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXP-K6-9Qi">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="KCd-z7-f9j"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="是否已經搭上計程車" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QND-0t-7jF">
+                                        <rect key="frame" x="0.0" y="35" width="300" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="qsz-Bs-NvL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bF2-Ns-YIH">
+                                        <rect key="frame" x="0.0" y="120" width="300" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FeF-QF-Mke">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="取消"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnj-f7-xxe">
+                                                <rect key="frame" x="150" y="0.0" width="150" height="50"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title=" 確認"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="lnj-f7-xxe" secondAttribute="bottom" id="3Fx-n8-5ZI"/>
+                                            <constraint firstAttribute="trailing" secondItem="lnj-f7-xxe" secondAttribute="trailing" id="INf-7B-4yc"/>
+                                            <constraint firstItem="lnj-f7-xxe" firstAttribute="leading" secondItem="FeF-QF-Mke" secondAttribute="trailing" id="KLn-Dg-7d1"/>
+                                            <constraint firstItem="FeF-QF-Mke" firstAttribute="width" secondItem="bF2-Ns-YIH" secondAttribute="width" multiplier="0.5" id="XYl-79-G2i"/>
+                                            <constraint firstItem="FeF-QF-Mke" firstAttribute="top" secondItem="bF2-Ns-YIH" secondAttribute="top" id="YNx-iR-CjG"/>
+                                            <constraint firstAttribute="bottom" secondItem="FeF-QF-Mke" secondAttribute="bottom" id="Zdd-zf-mkL"/>
+                                            <constraint firstAttribute="height" constant="50" id="afZ-Ti-tm4"/>
+                                            <constraint firstItem="lnj-f7-xxe" firstAttribute="top" secondItem="bF2-Ns-YIH" secondAttribute="top" id="rxW-oC-APk"/>
+                                            <constraint firstItem="FeF-QF-Mke" firstAttribute="leading" secondItem="bF2-Ns-YIH" secondAttribute="leading" id="sNm-N9-4Te"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="yXP-K6-9Qi" firstAttribute="top" secondItem="4qb-UK-wjM" secondAttribute="top" id="4Tf-3j-gcA"/>
+                                    <constraint firstAttribute="trailing" secondItem="QND-0t-7jF" secondAttribute="trailing" id="6Ue-bT-u7M"/>
+                                    <constraint firstItem="QND-0t-7jF" firstAttribute="leading" secondItem="4qb-UK-wjM" secondAttribute="leading" id="8QK-sy-H7k"/>
+                                    <constraint firstAttribute="width" constant="300" id="Czc-oM-Cgc"/>
+                                    <constraint firstItem="QND-0t-7jF" firstAttribute="top" secondItem="yXP-K6-9Qi" secondAttribute="bottom" id="G7l-ZE-aOK"/>
+                                    <constraint firstAttribute="bottom" secondItem="bF2-Ns-YIH" secondAttribute="bottom" id="J5n-gY-vsZ"/>
+                                    <constraint firstItem="bF2-Ns-YIH" firstAttribute="leading" secondItem="4qb-UK-wjM" secondAttribute="leading" id="NC7-K1-Upg"/>
+                                    <constraint firstAttribute="trailing" secondItem="yXP-K6-9Qi" secondAttribute="trailing" id="Vtz-7N-Irw"/>
+                                    <constraint firstAttribute="trailing" secondItem="bF2-Ns-YIH" secondAttribute="trailing" id="gBV-Gx-fVQ"/>
+                                    <constraint firstAttribute="height" constant="170" id="hBJ-ap-Aor"/>
+                                    <constraint firstItem="yXP-K6-9Qi" firstAttribute="leading" secondItem="4qb-UK-wjM" secondAttribute="leading" id="kqB-IU-0ua"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4qb-UK-wjM" firstAttribute="centerY" secondItem="0Y2-MN-8HE" secondAttribute="centerY" id="9uR-5E-rdW"/>
+                            <constraint firstItem="4qb-UK-wjM" firstAttribute="centerX" secondItem="0Y2-MN-8HE" secondAttribute="centerX" id="Tgb-Kq-LVn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Y2-MN-8HE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MJj-U8-TsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-399.19999999999999" y="3253.2233883058475"/>
+        </scene>
+        <!--付款資訊-->
+        <scene sceneID="non-Xs-ges">
+            <objects>
+                <viewController id="kac-YE-Ced" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1qL-Yg-v46">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請輸入隊邊(車隊隊員編號)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4G-Va-sMr">
+                                <rect key="frame" x="8" y="72" width="367" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="rx4-jE-I3m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請輸入隊邊(車隊隊員編號)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DR-Vf-LWT">
+                                <rect key="frame" x="8" y="134" width="375" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="dQb-Fc-Hxf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ARk-HJ-wmQ">
+                                <rect key="frame" x="8" y="92" width="359" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3vd-sa-2yj">
+                                <rect key="frame" x="8" y="158" width="359" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnu-18-yx2">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1Mz-tX-jzb"/>
+                                </constraints>
+                                <state key="normal" title=" 計算支付金額">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="J4G-Va-sMr" firstAttribute="leading" secondItem="ftp-Je-JLB" secondAttribute="leading" constant="8" id="86J-MW-hb6"/>
+                            <constraint firstItem="gnu-18-yx2" firstAttribute="leading" secondItem="1qL-Yg-v46" secondAttribute="leading" id="91G-8n-PfX"/>
+                            <constraint firstItem="3vd-sa-2yj" firstAttribute="top" secondItem="0DR-Vf-LWT" secondAttribute="bottom" constant="8" id="HDH-fC-Niy"/>
+                            <constraint firstItem="ARk-HJ-wmQ" firstAttribute="leading" secondItem="ftp-Je-JLB" secondAttribute="leading" constant="8" id="HcI-Iw-57u"/>
+                            <constraint firstItem="0DR-Vf-LWT" firstAttribute="leading" secondItem="ftp-Je-JLB" secondAttribute="leading" constant="8" id="Iqs-e4-wVX"/>
+                            <constraint firstItem="ftp-Je-JLB" firstAttribute="bottom" secondItem="gnu-18-yx2" secondAttribute="bottom" id="Ixr-X4-MN6"/>
+                            <constraint firstItem="3vd-sa-2yj" firstAttribute="leading" secondItem="ftp-Je-JLB" secondAttribute="leading" constant="8" id="M3Q-cl-y8f"/>
+                            <constraint firstItem="ftp-Je-JLB" firstAttribute="trailing" secondItem="gnu-18-yx2" secondAttribute="trailing" id="SnL-uh-05k"/>
+                            <constraint firstItem="ftp-Je-JLB" firstAttribute="trailing" secondItem="J4G-Va-sMr" secondAttribute="trailing" id="Zhk-Bp-rdO"/>
+                            <constraint firstItem="0DR-Vf-LWT" firstAttribute="trailing" secondItem="ftp-Je-JLB" secondAttribute="trailing" constant="8" id="bKg-7g-anK"/>
+                            <constraint firstItem="ftp-Je-JLB" firstAttribute="trailing" secondItem="3vd-sa-2yj" secondAttribute="trailing" constant="8" id="gQj-mI-IO1"/>
+                            <constraint firstItem="ftp-Je-JLB" firstAttribute="trailing" secondItem="ARk-HJ-wmQ" secondAttribute="trailing" constant="8" id="hHO-ae-zfM"/>
+                            <constraint firstItem="J4G-Va-sMr" firstAttribute="top" secondItem="ftp-Je-JLB" secondAttribute="top" constant="8" id="j8K-GS-rMX"/>
+                            <constraint firstItem="ARk-HJ-wmQ" firstAttribute="top" secondItem="J4G-Va-sMr" secondAttribute="bottom" constant="4" id="tuu-lt-bwd"/>
+                            <constraint firstItem="0DR-Vf-LWT" firstAttribute="top" secondItem="ARk-HJ-wmQ" secondAttribute="bottom" constant="12" id="zLS-WJ-GtH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ftp-Je-JLB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="付款資訊" id="k4X-mr-yW8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rrl-sD-lv8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1352.8" y="3220.8395802098953"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Fsz-9d-glG">
+            <objects>
+                <viewController id="jts-kz-fGv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KjB-Ag-mKb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Id2-De-087">
+                                <rect key="frame" x="0.0" y="64" width="375" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="叫車結果" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opd-pJ-bLh">
+                                        <rect key="frame" x="8" y="15" width="367" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Kft-dT-waj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98283554139999996" green="1" blue="0.81676466960000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="opd-pJ-bLh" firstAttribute="top" secondItem="Id2-De-087" secondAttribute="top" constant="15" id="7Ea-nJ-xWe"/>
+                                    <constraint firstAttribute="height" constant="50" id="C6d-7h-8Sq"/>
+                                    <constraint firstAttribute="bottom" secondItem="opd-pJ-bLh" secondAttribute="bottom" constant="15" id="HG2-wn-Fyx"/>
+                                    <constraint firstAttribute="trailing" secondItem="opd-pJ-bLh" secondAttribute="trailing" id="QBV-3S-IYF"/>
+                                    <constraint firstItem="opd-pJ-bLh" firstAttribute="leading" secondItem="Id2-De-087" secondAttribute="leading" constant="8" id="X4c-FN-0M5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Id2-De-087" firstAttribute="trailing" secondItem="qv9-cX-dEj" secondAttribute="trailing" id="PnL-dl-QV4"/>
+                            <constraint firstItem="Id2-De-087" firstAttribute="leading" secondItem="qv9-cX-dEj" secondAttribute="leading" id="oAS-jD-02q"/>
+                            <constraint firstItem="Id2-De-087" firstAttribute="top" secondItem="qv9-cX-dEj" secondAttribute="top" id="vrq-3o-si2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qv9-cX-dEj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cfb-U7-HBb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uLc-1r-OdU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="605.60000000000002" y="3982.7586206896553"/>
+        </scene>
         <!--叫車結果-->
         <scene sceneID="Tvq-uY-4Iq">
             <objects>
@@ -1190,7 +1397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YHC-zQ-m8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="510" y="3533"/>
+            <point key="canvasLocation" x="2388" y="3532.5337331334335"/>
         </scene>
         <!--指定上車地點-->
         <scene sceneID="8v9-oJ-zl2">
@@ -1521,6 +1728,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1DZ-HK-d82" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-641" y="2360"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GAJ-gN-VeM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xTl-IW-gcr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TiH-ob-n0z">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jts-kz-fGv" kind="relationship" relationship="rootViewController" id="mOR-Df-QjB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1mg-KC-hTp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-333.60000000000002" y="3982.7586206896553"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lXj-2Q-EjT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lhk-qR-Ieu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ceY-7d-fPL">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kac-YE-Ced" kind="relationship" relationship="rootViewController" id="qfD-rq-1lo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tOA-yU-5k6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="413.60000000000002" y="3220.8395802098953"/>
         </scene>
     </scenes>
 </document>
