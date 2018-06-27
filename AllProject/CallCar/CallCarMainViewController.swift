@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CallCarMainViewController: UIViewController {
+class CallCarMainViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet weak var location: UITextField!
     @IBOutlet weak var name: UITextField!
@@ -31,7 +31,7 @@ class CallCarMainViewController: UIViewController {
          wheelChair.tag = 0
          largeLuggage.tag = 0
         
-        
+        backgroundView.backgroundColor = .red
         //show keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
@@ -69,10 +69,20 @@ class CallCarMainViewController: UIViewController {
         }
     }
     
-    // 複寫（當碰觸螢幕）這裡沒反應
+//    // 複寫（當碰觸螢幕）這裡沒反應
+
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        self.view.endEditing(true)
+//    }
+   
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+ 
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -98,6 +108,14 @@ class CallCarMainViewController: UIViewController {
         self.scrollView.scrollIndicatorInsets = UIEdgeInsetsMake((navigationController?.navigationBar.frame.size.height)! + 20.0, 0, 0, 0)
     }
 
+    @IBAction func callCarBtn(_ sender: Any) {
+        
+    let vc = self.storyboard?.instantiateViewController(withIdentifier: "SearchCarViewController") as! SearchCarViewController
+        vc.address = location.text
+        self.navigationController?.pushViewController(vc, animated: true)
+
+        
+    }
     
 
 }

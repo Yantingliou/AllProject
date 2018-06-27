@@ -10,10 +10,14 @@ import UIKit
 
 class SearchCarViewController: UIViewController {
 
+    @IBOutlet weak var addressLable: UILabel!
+    
+    var address: String?
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        addressLable.text = address
     }
 
     override func didReceiveMemoryWarning() {
