@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CallCarMainViewController: UIViewController,UITextFieldDelegate {
+class CallCarMainViewController: UIViewController,UITextFieldDelegate,UIScrollViewDelegate {
 
     @IBOutlet weak var location: UITextField!
     @IBOutlet weak var name: UITextField!
@@ -30,8 +30,9 @@ class CallCarMainViewController: UIViewController,UITextFieldDelegate {
         
          wheelChair.tag = 0
          largeLuggage.tag = 0
+        self.scrollView.delegate = self
         
-        backgroundView.backgroundColor = .red
+        
         //show keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
@@ -69,20 +70,18 @@ class CallCarMainViewController: UIViewController,UITextFieldDelegate {
         }
     }
     
-//    // 複寫（當碰觸螢幕）這裡沒反應
+   // 複寫（當碰觸螢幕）這裡沒反應
 
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        self.view.endEditing(true)
-//    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
- 
+
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -104,8 +103,9 @@ class CallCarMainViewController: UIViewController,UITextFieldDelegate {
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
-        self.scrollView.contentInset = UIEdgeInsetsMake((navigationController?.navigationBar.frame.size.height)! + 20.0, 0, 0, 0)
-        self.scrollView.scrollIndicatorInsets = UIEdgeInsetsMake((navigationController?.navigationBar.frame.size.height)! + 20.0, 0, 0, 0)
+
+        self.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+        self.scrollView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 0, 0)
     }
 
     @IBAction func callCarBtn(_ sender: Any) {
@@ -119,3 +119,5 @@ class CallCarMainViewController: UIViewController,UITextFieldDelegate {
     
 
 }
+
+

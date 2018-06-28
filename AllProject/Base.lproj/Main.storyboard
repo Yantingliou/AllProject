@@ -1221,7 +1221,7 @@
         <!--新增常用地址-->
         <scene sceneID="eKq-Tk-utD">
             <objects>
-                <viewController title="新增常用地址" id="aYM-Xh-iFH" sceneMemberID="viewController">
+                <viewController title="新增常用地址" id="aYM-Xh-iFH" customClass="AddOftenaddressViewController" customModule="AllProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="umw-2n-nZW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1285,15 +1285,18 @@
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="50"/>
                                         <subviews>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hoj-VX-vuA">
-                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="50"/>
+                                                <rect key="frame" x="2" y="0.0" width="185.5" height="50"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="aYM-Xh-iFH" id="4z5-wI-5L3"/>
+                                                    <outlet property="delegate" destination="aYM-Xh-iFH" id="S99-4G-ZnI"/>
+                                                </connections>
                                             </pickerView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.43330913609999999" green="0.76161960660000005" blue="0.40921021829999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="Hoj-VX-vuA" secondAttribute="bottom" id="6j6-Vk-8h3"/>
                                             <constraint firstItem="Hoj-VX-vuA" firstAttribute="top" secondItem="snp-Cv-95M" secondAttribute="top" id="HaV-aA-EZg"/>
                                             <constraint firstAttribute="trailing" secondItem="Hoj-VX-vuA" secondAttribute="trailing" id="XDO-VZ-LuP"/>
-                                            <constraint firstItem="Hoj-VX-vuA" firstAttribute="leading" secondItem="snp-Cv-95M" secondAttribute="leading" id="vB6-JC-Eqm"/>
+                                            <constraint firstItem="Hoj-VX-vuA" firstAttribute="leading" secondItem="snp-Cv-95M" secondAttribute="leading" constant="2" id="vB6-JC-Eqm"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jzf-iy-woM">
@@ -1304,6 +1307,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="aYM-Xh-iFH" id="bjQ-FV-ARL"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1346,6 +1352,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="aYM-Xh-iFH" id="gad-Tr-vdI"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="詳細位置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vuo-Ac-8is">
                                 <rect key="frame" x="8" y="278" width="375" height="21"/>
@@ -1364,6 +1373,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="aYM-Xh-iFH" id="Qfr-Me-gTz"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="別名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFj-ug-wex">
                                 <rect key="frame" x="8" y="355" width="359" height="21"/>
@@ -1382,6 +1394,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="aYM-Xh-iFH" id="dBt-8h-wbP"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
