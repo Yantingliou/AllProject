@@ -11,6 +11,10 @@
 		D3D1336720E2787300166613 /* SearchCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D1336620E2787300166613 /* SearchCarViewController.swift */; };
 		D3D1339220E511C500166613 /* AddOftenaddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D1339120E511C500166613 /* AddOftenaddressViewController.swift */; };
 		D3D1339520E5309000166613 /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D1339420E5309000166613 /* UIScrollView.swift */; };
+		D3D1339820E7451F00166613 /* OldCustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D1339720E7451F00166613 /* OldCustomPicker.swift */; };
+		D3D1339A20E7466900166613 /* OldCustomPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D1339920E7466900166613 /* OldCustomPickerView.swift */; };
+		D3D1339C20E747EA00166613 /* UIViewExension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D1339B20E747EA00166613 /* UIViewExension.swift */; };
+		D3D1339E20E74C5100166613 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D1339D20E74C5100166613 /* UIColorExtension.swift */; };
 		D3FE43D020DEABD800DF9443 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FE43CF20DEABD800DF9443 /* AppDelegate.swift */; };
 		D3FE43D220DEABD800DF9443 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FE43D120DEABD800DF9443 /* ViewController.swift */; };
 		D3FE43D520DEABD800DF9443 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3FE43D320DEABD800DF9443 /* Main.storyboard */; };
@@ -23,6 +27,10 @@
 		D3D1336620E2787300166613 /* SearchCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCarViewController.swift; sourceTree = "<group>"; };
 		D3D1339120E511C500166613 /* AddOftenaddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOftenaddressViewController.swift; sourceTree = "<group>"; };
 		D3D1339420E5309000166613 /* UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollView.swift; sourceTree = "<group>"; };
+		D3D1339720E7451F00166613 /* OldCustomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldCustomPicker.swift; sourceTree = "<group>"; };
+		D3D1339920E7466900166613 /* OldCustomPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldCustomPickerView.swift; sourceTree = "<group>"; };
+		D3D1339B20E747EA00166613 /* UIViewExension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExension.swift; sourceTree = "<group>"; };
+		D3D1339D20E74C5100166613 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		D3FE43CC20DEABD800DF9443 /* AllProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3FE43CF20DEABD800DF9443 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3FE43D120DEABD800DF9443 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,8 +65,19 @@
 			isa = PBXGroup;
 			children = (
 				D3D1339420E5309000166613 /* UIScrollView.swift */,
+				D3D1339B20E747EA00166613 /* UIViewExension.swift */,
+				D3D1339D20E74C5100166613 /* UIColorExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		D3D1339620E744F400166613 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				D3D1339720E7451F00166613 /* OldCustomPicker.swift */,
+				D3D1339920E7466900166613 /* OldCustomPickerView.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		D3FE43C320DEABD800DF9443 = {
@@ -83,6 +102,7 @@
 				D3FE43CF20DEABD800DF9443 /* AppDelegate.swift */,
 				D3FE43D120DEABD800DF9443 /* ViewController.swift */,
 				D3FE43D320DEABD800DF9443 /* Main.storyboard */,
+				D3D1339620E744F400166613 /* CustomView */,
 				D3D1339320E52FE100166613 /* Extension */,
 				D3D1336820E2788700166613 /* CallCar */,
 				D3FE43D620DEABD800DF9443 /* Assets.xcassets */,
@@ -164,12 +184,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3D1339820E7451F00166613 /* OldCustomPicker.swift in Sources */,
 				D3D1336520E2777900166613 /* CallCarMainViewController.swift in Sources */,
 				D3FE43D220DEABD800DF9443 /* ViewController.swift in Sources */,
 				D3FE43D020DEABD800DF9443 /* AppDelegate.swift in Sources */,
 				D3D1339520E5309000166613 /* UIScrollView.swift in Sources */,
 				D3D1339220E511C500166613 /* AddOftenaddressViewController.swift in Sources */,
 				D3D1336720E2787300166613 /* SearchCarViewController.swift in Sources */,
+				D3D1339E20E74C5100166613 /* UIColorExtension.swift in Sources */,
+				D3D1339A20E7466900166613 /* OldCustomPickerView.swift in Sources */,
+				D3D1339C20E747EA00166613 /* UIViewExension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,7 +338,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.LIOU.AllProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -330,7 +354,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.LIOU.AllProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
