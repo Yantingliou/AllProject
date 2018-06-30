@@ -101,6 +101,7 @@ class AddOftenaddressViewController: UIViewController{
         print(locationArea.text)
         print(otherName.text)
         print(chooseCity)
+        //這裡用 userDefault 記錄
     }
 }
 
@@ -119,12 +120,19 @@ extension AddOftenaddressViewController: UIPickerViewDelegate,UIPickerViewDataSo
         
         chooseCity = city[row]
         print("chooseCity is \(chooseCity)")
+        
+        pickerView.subviews[1].isHidden = true
+        pickerView.subviews[2].isHidden = true
         return city[row]
     }
+    
     
 }
 
 
 /*
-目前 touch btn no respond  原因是和 pickerview 衝突
+//目前 touch btn no respond  原因是和 pickerview 衝突
+ 
+ 待解決問題，消除 pickerView 分隔線
+ 
  */

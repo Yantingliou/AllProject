@@ -549,7 +549,7 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="取消叫車"/>
                                         <connections>
-                                            <segue destination="PXe-j5-o6V" kind="show" id="vSq-VN-xC9"/>
+                                            <segue destination="PXe-j5-o6V" kind="show" id="MG7-Mi-1Qc"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -645,7 +645,7 @@
         <!--叫車結果-->
         <scene sceneID="QL2-KG-wPX">
             <objects>
-                <viewController title="叫車結果" id="PXe-j5-o6V" sceneMemberID="viewController">
+                <viewController title="叫車結果" id="PXe-j5-o6V" customClass="CallResultViewController" customModule="AllProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ha8-AB-ige">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -810,7 +810,7 @@
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ps1-82-YqV">
-                                                <rect key="frame" x="4" y="49" width="179.5" height="1"/>
+                                                <rect key="frame" x="0.0" y="49" width="183.5" height="1"/>
                                                 <color key="backgroundColor" red="0.77199000630000003" green="0.77199000630000003" blue="0.77199000630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="sqI-9g-Pwd"/>
@@ -834,7 +834,7 @@
                                             <constraint firstItem="Ps1-82-YqV" firstAttribute="top" secondItem="biE-dq-NcV" secondAttribute="bottom" id="7pu-cs-RyY"/>
                                             <constraint firstAttribute="trailing" secondItem="F97-p5-hiB" secondAttribute="trailing" constant="8" id="S67-Ri-I0I"/>
                                             <constraint firstItem="biE-dq-NcV" firstAttribute="top" secondItem="qNR-IL-cCg" secondAttribute="top" id="aBC-lA-KSH"/>
-                                            <constraint firstItem="Ps1-82-YqV" firstAttribute="leading" secondItem="qNR-IL-cCg" secondAttribute="leading" constant="4" id="cLx-Y4-DeV"/>
+                                            <constraint firstItem="Ps1-82-YqV" firstAttribute="leading" secondItem="qNR-IL-cCg" secondAttribute="leading" id="cLx-Y4-DeV"/>
                                             <constraint firstAttribute="trailing" secondItem="Ps1-82-YqV" secondAttribute="trailing" constant="4" id="idh-sp-6GW"/>
                                             <constraint firstItem="F97-p5-hiB" firstAttribute="top" secondItem="qNR-IL-cCg" secondAttribute="top" id="jbM-xh-XoN"/>
                                             <constraint firstItem="Ps1-82-YqV" firstAttribute="top" secondItem="F97-p5-hiB" secondAttribute="bottom" id="mTK-Cc-igw"/>
@@ -886,6 +886,9 @@
                                 <state key="normal" title="取消">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelBtn:" destination="PXe-j5-o6V" eventType="touchUpInside" id="Gfd-0x-tDU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -914,15 +917,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wYf-qz-17t"/>
                     </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="Ha8-AB-ige" id="2yT-cs-a5l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWx-3b-S9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="78" y="2420"/>
         </scene>
-        <!--View Controller-->
+        <!--Call Car Aleare View Controller-->
         <scene sceneID="oeN-6C-eSJ">
             <objects>
-                <viewController id="rmu-68-QJc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CallCarAleareViewController" id="rmu-68-QJc" customClass="CallCarAleareViewController" customModule="AllProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="92N-O3-OaN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -956,12 +962,18 @@
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="取消"/>
+                                                <connections>
+                                                    <action selector="cancelBtn:" destination="rmu-68-QJc" eventType="touchUpInside" id="Ak7-gz-hgl"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnj-f7-xxe">
                                                 <rect key="frame" x="150" y="0.0" width="150" height="50"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title=" 確認"/>
+                                                <connections>
+                                                    <action selector="confirmBtn:" destination="rmu-68-QJc" eventType="touchUpInside" id="S7T-9E-uHZ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -994,13 +1006,18 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="4qb-UK-wjM" firstAttribute="centerY" secondItem="0Y2-MN-8HE" secondAttribute="centerY" id="9uR-5E-rdW"/>
                             <constraint firstItem="4qb-UK-wjM" firstAttribute="centerX" secondItem="0Y2-MN-8HE" secondAttribute="centerX" id="Tgb-Kq-LVn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Y2-MN-8HE"/>
                     </view>
+                    <navigationItem key="navigationItem" id="bWg-Gj-e0I"/>
+                    <connections>
+                        <outlet property="describe" destination="QND-0t-7jF" id="PS1-Wm-oWM"/>
+                        <outlet property="titleLable" destination="yXP-K6-9Qi" id="SKK-he-Qul"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MJj-U8-TsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
