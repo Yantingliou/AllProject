@@ -10,6 +10,7 @@ import UIKit
 
 class CallResultViewController: UIViewController {
 
+    @IBOutlet weak var carTeamNo: UILabel!
     @IBOutlet var backgroundView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,12 +37,16 @@ class CallResultViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
 */
         
-/*
-        let modelVC = self.storyboard?.instantiateViewController(withIdentifier: "CallCarAleareViewController") as! CallCarAleareViewController
-        let navBarOnModal: UINavigationController = UINavigationController(rootViewController: modelVC)
 
-        self.present(navBarOnModal, animated: true, completion: nil)
- */
+    }
+    
+    //接收到狀態改變 跳轉付款頁面
+    @IBAction func arriveLocation(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "CallCarPayMoneyViewController") as! CallCarPayMoneyViewController
+//        vc.carTeamNo.text = carTeamNo.text
+        vc.carTeamNoText = carTeamNo.text
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
 }

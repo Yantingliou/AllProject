@@ -425,6 +425,9 @@
                                                         <state key="normal" title="直接付款">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="payBillBtn:" destination="E0R-WO-yeV" eventType="touchUpInside" id="fnP-Ew-f7z"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDn-22-kJg">
                                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="50"/>
@@ -753,7 +756,6 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="GcZ-l4-sZc" secondAttribute="bottom" constant="4" id="0Cz-ry-lYD"/>
                                                     <constraint firstItem="CiP-om-afw" firstAttribute="top" secondItem="P8W-Nn-l9g" secondAttribute="top" id="0Pg-7D-wuF"/>
@@ -871,7 +873,6 @@
                                     <constraint firstAttribute="bottom" secondItem="5J4-D8-mOB" secondAttribute="bottom" constant="4" id="jCv-Nz-Sae"/>
                                     <constraint firstItem="qNR-IL-cCg" firstAttribute="leading" secondItem="X4d-QT-gZL" secondAttribute="trailing" id="mn6-HL-3Or"/>
                                     <constraint firstAttribute="trailing" secondItem="qNR-IL-cCg" secondAttribute="trailing" id="oT7-8b-7z1"/>
-                                    <constraint firstAttribute="trailing" secondItem="P8W-Nn-l9g" secondAttribute="trailing" constant="187.5" id="qKJ-aL-gjc"/>
                                     <constraint firstItem="5J4-D8-mOB" firstAttribute="leading" secondItem="X4d-QT-gZL" secondAttribute="trailing" constant="4" id="rK1-uC-bzw"/>
                                     <constraint firstAttribute="bottom" secondItem="KUD-SA-h1L" secondAttribute="bottom" id="vPw-ES-RMq"/>
                                     <constraint firstItem="5J4-D8-mOB" firstAttribute="top" secondItem="qNR-IL-cCg" secondAttribute="bottom" constant="4" id="z2k-M7-Tbm"/>
@@ -888,6 +889,20 @@
                                 </state>
                                 <connections>
                                     <action selector="cancelBtn:" destination="PXe-j5-o6V" eventType="touchUpInside" id="Gfd-0x-tDU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEE-uM-npw">
+                                <rect key="frame" x="20" y="577" width="90" height="30"/>
+                                <color key="backgroundColor" red="0.23534443729999999" green="0.52121165920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="Gsy-Cq-eUD"/>
+                                    <constraint firstAttribute="height" constant="30" id="qTh-av-J47"/>
+                                </constraints>
+                                <state key="normal" title="到達目的地">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="arriveLocation:" destination="PXe-j5-o6V" eventType="touchUpInside" id="1e7-fW-aGy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -908,8 +923,10 @@
                             <constraint firstItem="trK-qw-gPa" firstAttribute="trailing" secondItem="wYf-qz-17t" secondAttribute="trailing" id="WUO-3j-OfG"/>
                             <constraint firstItem="gAi-hR-GJ6" firstAttribute="leading" secondItem="Ha8-AB-ige" secondAttribute="leading" id="X13-C3-2XU"/>
                             <constraint firstItem="gAi-hR-GJ6" firstAttribute="leading" secondItem="wYf-qz-17t" secondAttribute="leading" id="Xit-ap-KfI"/>
+                            <constraint firstItem="gAi-hR-GJ6" firstAttribute="top" secondItem="mEE-uM-npw" secondAttribute="bottom" constant="10" id="YeI-X8-DxA"/>
                             <constraint firstItem="h8P-6A-Zos" firstAttribute="leading" secondItem="wYf-qz-17t" secondAttribute="leading" id="dhz-L6-M4B"/>
                             <constraint firstItem="e5h-Er-9x8" firstAttribute="leading" secondItem="wYf-qz-17t" secondAttribute="leading" constant="8" id="eGD-zq-Aeu"/>
+                            <constraint firstItem="mEE-uM-npw" firstAttribute="leading" secondItem="wYf-qz-17t" secondAttribute="leading" constant="20" id="ejs-KL-nOG"/>
                             <constraint firstItem="trK-qw-gPa" firstAttribute="leading" secondItem="wYf-qz-17t" secondAttribute="leading" id="gbp-yr-sg9"/>
                             <constraint firstAttribute="trailing" secondItem="gAi-hR-GJ6" secondAttribute="trailing" id="iHa-Uu-fca"/>
                             <constraint firstItem="e5h-Er-9x8" firstAttribute="top" secondItem="raH-4N-klX" secondAttribute="bottom" constant="8" id="iPp-3v-ati"/>
@@ -919,11 +936,12 @@
                     </view>
                     <connections>
                         <outlet property="backgroundView" destination="Ha8-AB-ige" id="2yT-cs-a5l"/>
+                        <outlet property="carTeamNo" destination="JrF-JL-Hs0" id="DLV-Nh-8C7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWx-3b-S9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="78" y="2420"/>
+            <point key="canvasLocation" x="77.599999999999994" y="2419.3403298350827"/>
         </scene>
         <!--Call Car Aleare View Controller-->
         <scene sceneID="oeN-6C-eSJ">
@@ -1026,13 +1044,13 @@
         <!--付款資訊-->
         <scene sceneID="non-Xs-ges">
             <objects>
-                <viewController id="kac-YE-Ced" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CallCarPayMoneyViewController" id="kac-YE-Ced" customClass="CallCarPayMoneyViewController" customModule="AllProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1qL-Yg-v46">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請輸入隊邊(車隊隊員編號)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4G-Va-sMr">
-                                <rect key="frame" x="8" y="72" width="367" height="16"/>
+                                <rect key="frame" x="8" y="28" width="367" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="rx4-jE-I3m"/>
                                 </constraints>
@@ -1040,8 +1058,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請輸入隊邊(車隊隊員編號)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DR-Vf-LWT">
-                                <rect key="frame" x="8" y="134" width="375" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請確認付款金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DR-Vf-LWT">
+                                <rect key="frame" x="8" y="90" width="375" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="dQb-Fc-Hxf"/>
                                 </constraints>
@@ -1050,16 +1068,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ARk-HJ-wmQ">
-                                <rect key="frame" x="8" y="92" width="359" height="30"/>
+                                <rect key="frame" x="8" y="48" width="359" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3vd-sa-2yj">
-                                <rect key="frame" x="8" y="158" width="359" height="30"/>
+                                <rect key="frame" x="8" y="114" width="359" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnu-18-yx2">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
@@ -1093,6 +1111,10 @@
                         <viewLayoutGuide key="safeArea" id="ftp-Je-JLB"/>
                     </view>
                     <navigationItem key="navigationItem" title="付款資訊" id="k4X-mr-yW8"/>
+                    <connections>
+                        <outlet property="carTeamNo" destination="ARk-HJ-wmQ" id="Whr-GH-cvy"/>
+                        <outlet property="payMoney" destination="3vd-sa-2yj" id="hWt-jl-0ka"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rrl-sD-lv8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1395,7 +1417,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GMQ-Iy-Eqp">
                                                 <rect key="frame" x="4" y="54" width="367" height="21"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="輸入城市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9I-eY-MXt">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選擇城市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9I-eY-MXt">
                                                         <rect key="frame" x="0.0" y="0.0" width="183.5" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -1570,9 +1592,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="kac-YE-Ced" kind="relationship" relationship="rootViewController" id="qfD-rq-1lo"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tOA-yU-5k6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

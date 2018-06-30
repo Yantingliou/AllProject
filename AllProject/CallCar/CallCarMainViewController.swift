@@ -117,7 +117,12 @@ class CallCarMainViewController: UIViewController,UITextFieldDelegate,UIScrollVi
         
     }
     
-
+    @IBAction func payBillBtn(_ sender: Any) {
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "CallCarPayMoneyViewController") as! CallCarPayMoneyViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 

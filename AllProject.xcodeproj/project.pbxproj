@@ -17,6 +17,7 @@
 		D3D1339E20E74C5100166613 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D1339D20E74C5100166613 /* UIColorExtension.swift */; };
 		D3D133A020E75A9200166613 /* CallResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D1339F20E75A9200166613 /* CallResultViewController.swift */; };
 		D3D133A220E75AC900166613 /* CallCarAleareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D133A120E75AC900166613 /* CallCarAleareViewController.swift */; };
+		D3D133A420E7754600166613 /* CallCarPayMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D133A320E7754600166613 /* CallCarPayMoneyViewController.swift */; };
 		D3FE43D020DEABD800DF9443 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FE43CF20DEABD800DF9443 /* AppDelegate.swift */; };
 		D3FE43D220DEABD800DF9443 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FE43D120DEABD800DF9443 /* ViewController.swift */; };
 		D3FE43D520DEABD800DF9443 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3FE43D320DEABD800DF9443 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		D3D1339D20E74C5100166613 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		D3D1339F20E75A9200166613 /* CallResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallResultViewController.swift; sourceTree = "<group>"; };
 		D3D133A120E75AC900166613 /* CallCarAleareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCarAleareViewController.swift; sourceTree = "<group>"; };
+		D3D133A320E7754600166613 /* CallCarPayMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCarPayMoneyViewController.swift; sourceTree = "<group>"; };
 		D3FE43CC20DEABD800DF9443 /* AllProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3FE43CF20DEABD800DF9443 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3FE43D120DEABD800DF9443 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				D3D1339120E511C500166613 /* AddOftenaddressViewController.swift */,
 				D3D1339F20E75A9200166613 /* CallResultViewController.swift */,
 				D3D133A120E75AC900166613 /* CallCarAleareViewController.swift */,
+				D3D133A320E7754600166613 /* CallCarPayMoneyViewController.swift */,
 			);
 			path = CallCar;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				D3D1339820E7451F00166613 /* OldCustomPicker.swift in Sources */,
 				D3D1336520E2777900166613 /* CallCarMainViewController.swift in Sources */,
 				D3FE43D220DEABD800DF9443 /* ViewController.swift in Sources */,
+				D3D133A420E7754600166613 /* CallCarPayMoneyViewController.swift in Sources */,
 				D3FE43D020DEABD800DF9443 /* AppDelegate.swift in Sources */,
 				D3D1339520E5309000166613 /* UIScrollView.swift in Sources */,
 				D3D1339220E511C500166613 /* AddOftenaddressViewController.swift in Sources */,
