@@ -17,10 +17,23 @@ class CallCarAleareViewController: UIViewController {
         case confirmInCar
         case cancelCall
     }
+    
+    var chooseState: state = .confirmInCar
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        switch chooseState {
+        case .cancelCall:
+            titleLable.text = "上車確認"
+            describe.text = "是否已經搭上計程車"
+        case.confirmInCar:
+            titleLable.text = "取消叫車"
+            describe.text = "確定將取消叫車嗎？"
+        default:
+            break
+        }
+      
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,9 +48,21 @@ class CallCarAleareViewController: UIViewController {
          一種是人上車
          一種是取消叫車
          */
-        self.dismiss(animated: true) {
-           
+        
+      
+        switch chooseState {
+        case .cancelCall:
+            self.dismiss(animated: true) {
+                
+            }
+        case .confirmInCar:
+            self.dismiss(animated: true) {
+                
+            }
+        default:
+            break
         }
+       
     }
     
 

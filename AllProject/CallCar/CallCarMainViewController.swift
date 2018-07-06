@@ -24,6 +24,8 @@ class CallCarMainViewController: UIViewController,UITextFieldDelegate,UIScrollVi
     @IBOutlet weak var wheelChair: UIImageView!
     @IBOutlet weak var largeLuggage: UIImageView!
 
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -120,6 +122,16 @@ class CallCarMainViewController: UIViewController,UITextFieldDelegate,UIScrollVi
     @IBAction func payBillBtn(_ sender: Any) {
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "CallCarPayMoneyViewController") as! CallCarPayMoneyViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func useMapChooseLocation(_ sender: Any) {
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChooseLocationViewController") as! ChooseLocationViewController
+
+        vc.addChooseLocation = {
+          self.location.text  = vc.chooseLocation
+        }
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

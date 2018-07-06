@@ -26,6 +26,14 @@ class SearchCarViewController: UIViewController {
     }
     
 
+    @IBAction func cancalCallCarBtn(_ sender: Any) {
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "CallCarAleareViewController") as! CallCarAleareViewController
+        vc.chooseState = .cancelCall
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 

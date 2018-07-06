@@ -123,7 +123,7 @@
         <!--叫車服務-->
         <scene sceneID="afs-9f-fbs">
             <objects>
-                <viewController title="叫車服務" id="E0R-WO-yeV" customClass="CallCarMainViewController" customModule="AllProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CallCarMainViewController" title="叫車服務" id="E0R-WO-yeV" customClass="CallCarMainViewController" customModule="AllProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ERt-UP-rjj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -185,7 +185,7 @@
                                                         </constraints>
                                                         <state key="normal" image="icon_detail_web"/>
                                                         <connections>
-                                                            <segue destination="dTd-6U-eNB" kind="show" id="9TQ-0X-uYj"/>
+                                                            <action selector="useMapChooseLocation:" destination="E0R-WO-yeV" eventType="touchUpInside" id="vrd-rd-Qm4"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkE-6i-5fQ">
@@ -552,7 +552,7 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="取消叫車"/>
                                         <connections>
-                                            <segue destination="PXe-j5-o6V" kind="show" id="MG7-Mi-1Qc"/>
+                                            <action selector="cancalCallCarBtn:" destination="AvX-nk-k3o" eventType="touchUpInside" id="i9K-gS-wgN"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -620,6 +620,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xru-hT-EKT">
+                                <rect key="frame" x="8" y="557" width="62" height="30"/>
+                                <color key="backgroundColor" red="0.43330913609999999" green="0.76161960660000005" blue="0.40921021829999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="司機到達">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -631,8 +638,10 @@
                             <constraint firstItem="edj-MY-pSn" firstAttribute="leading" secondItem="EVu-VT-KMj" secondAttribute="leading" constant="8" id="UTT-yH-d0k"/>
                             <constraint firstItem="EVu-VT-KMj" firstAttribute="trailing" secondItem="edj-MY-pSn" secondAttribute="trailing" constant="8" id="dPu-wd-BWo"/>
                             <constraint firstItem="rNO-pm-dE2" firstAttribute="centerX" secondItem="EVu-VT-KMj" secondAttribute="centerX" id="grS-nj-QwM"/>
+                            <constraint firstItem="bIq-lo-teI" firstAttribute="top" secondItem="Xru-hT-EKT" secondAttribute="bottom" constant="30" id="guu-Hi-HDl"/>
                             <constraint firstItem="rNO-pm-dE2" firstAttribute="top" secondItem="edj-MY-pSn" secondAttribute="bottom" constant="20" id="hVw-wj-P8w"/>
                             <constraint firstItem="z4L-PW-3rK" firstAttribute="top" secondItem="EVu-VT-KMj" secondAttribute="top" constant="45" id="s2U-Qd-cVD"/>
+                            <constraint firstItem="Xru-hT-EKT" firstAttribute="leading" secondItem="EVu-VT-KMj" secondAttribute="leading" constant="8" id="wfM-fe-1b9"/>
                             <constraint firstItem="bIq-lo-teI" firstAttribute="trailing" secondItem="EVu-VT-KMj" secondAttribute="trailing" id="z7S-nu-6vB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EVu-VT-KMj"/>
@@ -898,7 +907,7 @@
                                     <constraint firstAttribute="width" constant="90" id="Gsy-Cq-eUD"/>
                                     <constraint firstAttribute="height" constant="30" id="qTh-av-J47"/>
                                 </constraints>
-                                <state key="normal" title="到達目的地">
+                                <state key="normal" title="乘客上車">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -1120,61 +1129,16 @@
             </objects>
             <point key="canvasLocation" x="1352.8" y="3220.8395802098953"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Fsz-9d-glG">
-            <objects>
-                <viewController id="jts-kz-fGv" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KjB-Ag-mKb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Id2-De-087">
-                                <rect key="frame" x="0.0" y="64" width="375" height="50"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="叫車結果" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opd-pJ-bLh">
-                                        <rect key="frame" x="8" y="15" width="367" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="Kft-dT-waj"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.98283554139999996" green="1" blue="0.81676466960000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="opd-pJ-bLh" firstAttribute="top" secondItem="Id2-De-087" secondAttribute="top" constant="15" id="7Ea-nJ-xWe"/>
-                                    <constraint firstAttribute="height" constant="50" id="C6d-7h-8Sq"/>
-                                    <constraint firstAttribute="bottom" secondItem="opd-pJ-bLh" secondAttribute="bottom" constant="15" id="HG2-wn-Fyx"/>
-                                    <constraint firstAttribute="trailing" secondItem="opd-pJ-bLh" secondAttribute="trailing" id="QBV-3S-IYF"/>
-                                    <constraint firstItem="opd-pJ-bLh" firstAttribute="leading" secondItem="Id2-De-087" secondAttribute="leading" constant="8" id="X4c-FN-0M5"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Id2-De-087" firstAttribute="trailing" secondItem="qv9-cX-dEj" secondAttribute="trailing" id="PnL-dl-QV4"/>
-                            <constraint firstItem="Id2-De-087" firstAttribute="leading" secondItem="qv9-cX-dEj" secondAttribute="leading" id="oAS-jD-02q"/>
-                            <constraint firstItem="Id2-De-087" firstAttribute="top" secondItem="qv9-cX-dEj" secondAttribute="top" id="vrq-3o-si2"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="qv9-cX-dEj"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Cfb-U7-HBb"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uLc-1r-OdU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="605.60000000000002" y="3982.7586206896553"/>
-        </scene>
         <!--指定上車地點-->
         <scene sceneID="8v9-oJ-zl2">
             <objects>
-                <viewController title="指定上車地點" id="dTd-6U-eNB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChooseLocationViewController" title="指定上車地點" id="dTd-6U-eNB" customClass="ChooseLocationViewController" customModule="AllProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vjo-Ac-IJE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcq-ed-Y5Y">
-                                <rect key="frame" x="0.0" y="64" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="指定上車地點" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsC-o7-5fP">
                                         <rect key="frame" x="8" y="15" width="367" height="20"/>
@@ -1196,7 +1160,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請移動到上車地點" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oub-ej-MB7">
-                                <rect key="frame" x="8" y="114" width="367" height="21"/>
+                                <rect key="frame" x="8" y="70" width="367" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="PYe-za-Vis"/>
                                 </constraints>
@@ -1205,7 +1169,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRT-Cc-63c">
-                                <rect key="frame" x="0.0" y="135" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="91" width="375" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收尋中..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xem-g6-1Sg">
                                         <rect key="frame" x="8" y="0.0" width="367" height="30"/>
@@ -1222,14 +1186,27 @@
                                     <constraint firstItem="xem-g6-1Sg" firstAttribute="top" secondItem="aRT-Cc-63c" secondAttribute="top" id="wAu-v4-uun"/>
                                 </constraints>
                             </view>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Y7x-UD-U6f">
-                                <rect key="frame" x="0.0" y="165" width="375" height="502"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y7x-UD-U6f">
+                                <rect key="frame" x="0.0" y="121" width="375" height="546"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELy-Ex-eOj">
-                                <rect key="frame" x="182" y="405" width="10" height="22"/>
+                                <rect key="frame" x="182" y="383" width="10" height="22"/>
                                 <state key="normal" image="cms_location">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwX-YB-l9N">
+                                <rect key="frame" x="149" y="353" width="77" height="30"/>
+                                <color key="backgroundColor" red="0.62003987728848886" green="0.76109040143939399" blue="0.76161960660000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1Nm-t0-x7d"/>
+                                </constraints>
+                                <state key="normal" title="選擇此位置">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseLocationBtn:" destination="dTd-6U-eNB" eventType="touchUpInside" id="J2A-kA-JHO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1243,7 +1220,9 @@
                             <constraint firstItem="dcq-ed-Y5Y" firstAttribute="top" secondItem="kBe-ti-1fy" secondAttribute="top" id="SLy-nH-3Y8"/>
                             <constraint firstItem="kBe-ti-1fy" firstAttribute="trailing" secondItem="aRT-Cc-63c" secondAttribute="trailing" id="Vf8-CW-pUe"/>
                             <constraint firstItem="dcq-ed-Y5Y" firstAttribute="leading" secondItem="kBe-ti-1fy" secondAttribute="leading" id="YUX-7w-ifP"/>
+                            <constraint firstItem="ELy-Ex-eOj" firstAttribute="top" secondItem="rwX-YB-l9N" secondAttribute="bottom" id="bNf-6B-Wpo"/>
                             <constraint firstItem="oub-ej-MB7" firstAttribute="top" secondItem="dcq-ed-Y5Y" secondAttribute="bottom" id="bRm-do-in5"/>
+                            <constraint firstItem="rwX-YB-l9N" firstAttribute="leading" secondItem="Y7x-UD-U6f" secondAttribute="trailing" constant="-226" id="bzk-3Q-8de"/>
                             <constraint firstItem="Y7x-UD-U6f" firstAttribute="top" secondItem="aRT-Cc-63c" secondAttribute="bottom" id="emo-44-7Xv"/>
                             <constraint firstItem="oub-ej-MB7" firstAttribute="leading" secondItem="kBe-ti-1fy" secondAttribute="leading" constant="8" id="mQG-d6-nm4"/>
                             <constraint firstItem="ELy-Ex-eOj" firstAttribute="centerY" secondItem="Y7x-UD-U6f" secondAttribute="centerY" id="nrB-9b-sEK"/>
@@ -1252,6 +1231,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kBe-ti-1fy"/>
                     </view>
+                    <connections>
+                        <outlet property="addressText" destination="xem-g6-1Sg" id="RFv-ul-wTc"/>
+                        <outlet property="myMapView" destination="Y7x-UD-U6f" id="4vc-Wv-F74"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UtO-aQ-U32" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1563,39 +1546,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1DZ-HK-d82" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-641" y="2360"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="GAJ-gN-VeM">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xTl-IW-gcr" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TiH-ob-n0z">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="jts-kz-fGv" kind="relationship" relationship="rootViewController" id="mOR-Df-QjB"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1mg-KC-hTp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-333.60000000000002" y="3982.7586206896553"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="lXj-2Q-EjT">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lhk-qR-Ieu" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ceY-7d-fPL">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tOA-yU-5k6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="413.60000000000002" y="3220.8395802098953"/>
         </scene>
     </scenes>
     <resources>

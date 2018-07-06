@@ -27,6 +27,7 @@ class CallResultViewController: UIViewController {
     
     @IBAction func cancelBtn(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "CallCarAleareViewController") as! CallCarAleareViewController
+        vc.chooseState = .confirmInCar
         self.present(vc, animated: true, completion: nil)
 
 /*  =====
