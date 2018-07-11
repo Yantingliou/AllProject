@@ -34,14 +34,10 @@ class SearchCarViewController: UIViewController {
     }
     
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func carArrive(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "CallResultViewController") as! CallResultViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
-    */
+   
 
 }

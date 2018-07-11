@@ -626,6 +626,9 @@
                                 <state key="normal" title="司機到達">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="carArrive:" destination="AvX-nk-k3o" eventType="touchUpInside" id="qMy-aH-oGp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
