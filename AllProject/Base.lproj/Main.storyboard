@@ -107,11 +107,60 @@
         <!--生活繳費-->
         <scene sceneID="vED-03-t36">
             <objects>
-                <viewController id="mZK-2i-sse" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LifePayMentMainViewController" id="mZK-2i-sse" customClass="LifePayMentMainViewController" customModule="AllProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TBu-Du-RNK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c73-9P-Kb8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </sceneKitView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gq6-Eg-E1R">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84V-9L-INT">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="輸入停車資訊" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJD-4M-y8Q">
+                                                <rect key="frame" x="8" y="15" width="367" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="pm3-g9-SOc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.98283554139999996" green="1" blue="0.81676466960000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="EJD-4M-y8Q" firstAttribute="leading" secondItem="84V-9L-INT" secondAttribute="leading" constant="8" id="8m5-8x-DBk"/>
+                                            <constraint firstItem="EJD-4M-y8Q" firstAttribute="top" secondItem="84V-9L-INT" secondAttribute="top" constant="15" id="90S-P6-43K"/>
+                                            <constraint firstAttribute="trailing" secondItem="EJD-4M-y8Q" secondAttribute="trailing" id="G4y-fh-nbP"/>
+                                            <constraint firstAttribute="height" constant="50" id="TfS-1D-Iug"/>
+                                            <constraint firstAttribute="bottom" secondItem="EJD-4M-y8Q" secondAttribute="bottom" constant="15" id="bJL-AD-IUY"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="84V-9L-INT" firstAttribute="leading" secondItem="Gq6-Eg-E1R" secondAttribute="leading" id="Dn8-oj-FoC"/>
+                                    <constraint firstAttribute="trailing" secondItem="84V-9L-INT" secondAttribute="trailing" id="cym-kZ-KEE"/>
+                                    <constraint firstItem="84V-9L-INT" firstAttribute="top" secondItem="Gq6-Eg-E1R" secondAttribute="top" id="m4w-Hv-N6B"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lsB-rm-zmH" firstAttribute="bottom" secondItem="Gq6-Eg-E1R" secondAttribute="bottom" id="FO2-CP-7e7"/>
+                            <constraint firstItem="lsB-rm-zmH" firstAttribute="trailing" secondItem="Gq6-Eg-E1R" secondAttribute="trailing" id="G00-ox-te2"/>
+                            <constraint firstItem="c73-9P-Kb8" firstAttribute="leading" secondItem="lsB-rm-zmH" secondAttribute="leading" id="Vjz-Nc-dS0"/>
+                            <constraint firstItem="lsB-rm-zmH" firstAttribute="bottom" secondItem="c73-9P-Kb8" secondAttribute="bottom" id="aNH-qw-sEq"/>
+                            <constraint firstItem="Gq6-Eg-E1R" firstAttribute="leading" secondItem="lsB-rm-zmH" secondAttribute="leading" id="cf1-jn-ZRz"/>
+                            <constraint firstItem="c73-9P-Kb8" firstAttribute="width" secondItem="Gq6-Eg-E1R" secondAttribute="width" id="g4B-3F-z7N"/>
+                            <constraint firstItem="lsB-rm-zmH" firstAttribute="trailing" secondItem="c73-9P-Kb8" secondAttribute="trailing" id="jof-e4-BCW"/>
+                            <constraint firstItem="Gq6-Eg-E1R" firstAttribute="top" secondItem="lsB-rm-zmH" secondAttribute="top" id="obr-G4-aha"/>
+                            <constraint firstItem="c73-9P-Kb8" firstAttribute="top" secondItem="lsB-rm-zmH" secondAttribute="top" id="wSK-rf-2XK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lsB-rm-zmH"/>
                     </view>
                     <navigationItem key="navigationItem" title="生活繳費" id="xJ9-Cb-gmo"/>
