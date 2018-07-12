@@ -1,18 +1,23 @@
 //
-//  LifePayMentMainViewController.swift
+//  CarNoInformationViewController.swift
 //  AllProject
 //
-//  Created by 劉彥廷 on 2018/7/11.
+//  Created by 劉彥廷 on 2018/7/12.
 //  Copyright © 2018年 liou. All rights reserved.
 //
 
 import UIKit
 
-class LifePayMentMainViewController: UIViewController {
+class CarNoInformationViewController: UIViewController {
 
+ 
+    
+    var carNoTitle :String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        useTiltle.topItem?.title = carNoTitle
         // Do any additional setup after loading the view.
     }
 
@@ -22,13 +27,6 @@ class LifePayMentMainViewController: UIViewController {
     }
     
 
-
-    @IBAction func addBtn(_ sender: Any) {
-        
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "OftenUseCarNoViewController") as! OftenUseCarNoViewController
-        
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
     /*
     // MARK: - Navigation
 

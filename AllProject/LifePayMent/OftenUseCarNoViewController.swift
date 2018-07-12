@@ -1,15 +1,16 @@
 //
-//  LifePayMentMainViewController.swift
+//  OftenUseCarNoViewController.swift
 //  AllProject
 //
-//  Created by 劉彥廷 on 2018/7/11.
+//  Created by 劉彥廷 on 2018/7/12.
 //  Copyright © 2018年 liou. All rights reserved.
 //
 
 import UIKit
 
-class LifePayMentMainViewController: UIViewController {
+class OftenUseCarNoViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,10 +23,9 @@ class LifePayMentMainViewController: UIViewController {
     }
     
 
-
-    @IBAction func addBtn(_ sender: Any) {
-        
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "OftenUseCarNoViewController") as! OftenUseCarNoViewController
+    @IBAction func leftBtn(_ sender: Any) {
+     print("next Page")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "CarNoInformationViewController") as! CarNoInformationViewController
         
         self.navigationController?.pushViewController(vc, animated: true)
     }
