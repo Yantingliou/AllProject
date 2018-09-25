@@ -122,6 +122,9 @@
                                 <state key="normal" title="新增車號">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addCarNoBtn:" destination="qSE-dV-R9O" eventType="touchUpInside" id="RQc-df-MBL"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="04n-cD-eme">
                                 <rect key="frame" x="0.0" y="64" width="375" height="50"/>
@@ -234,11 +237,29 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Klx-jm-ct4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="523"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Mg5-pV-Y8F">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mg5-pV-Y8F" id="o51-gd-3xP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Vjo-Ar-aZK" firstAttribute="trailing" secondItem="Tp9-eg-82g" secondAttribute="trailing" id="9aa-7s-XrG"/>
+                            <constraint firstItem="Klx-jm-ct4" firstAttribute="top" secondItem="Tp9-eg-82g" secondAttribute="top" id="E9d-Wo-a8Q"/>
+                            <constraint firstItem="Klx-jm-ct4" firstAttribute="leading" secondItem="Tp9-eg-82g" secondAttribute="leading" id="F40-zK-zK9"/>
                             <constraint firstItem="Vjo-Ar-aZK" firstAttribute="leading" secondItem="Tp9-eg-82g" secondAttribute="leading" id="Kzi-iF-NtJ"/>
+                            <constraint firstItem="Tp9-eg-82g" firstAttribute="trailing" secondItem="Klx-jm-ct4" secondAttribute="trailing" id="jjm-el-dXN"/>
+                            <constraint firstItem="Vjo-Ar-aZK" firstAttribute="top" secondItem="Klx-jm-ct4" secondAttribute="bottom" constant="30" id="lut-zB-k20"/>
                             <constraint firstItem="Tp9-eg-82g" firstAttribute="bottom" secondItem="Vjo-Ar-aZK" secondAttribute="bottom" id="uq0-T0-waT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tp9-eg-82g"/>
@@ -299,23 +320,29 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RA2-hp-OPn">
                                                 <rect key="frame" x="0.0" y="0.0" width="187.5" height="20"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選擇縣市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HU-Wb-ILi">
-                                                        <rect key="frame" x="4" y="0.0" width="183.5" height="16"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選擇縣市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HU-Wb-ILi" colorLabel="IBBuiltInLabel-Green">
+                                                        <rect key="frame" x="4" y="5" width="183.5" height="16"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="16" id="pLP-te-oEq"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="1HU-Wb-ILi" firstAttribute="top" secondItem="RA2-hp-OPn" secondAttribute="top" id="esm-pM-LWd"/>
+                                                    <constraint firstItem="1HU-Wb-ILi" firstAttribute="top" secondItem="RA2-hp-OPn" secondAttribute="top" constant="5" id="esm-pM-LWd"/>
                                                     <constraint firstItem="1HU-Wb-ILi" firstAttribute="leading" secondItem="RA2-hp-OPn" secondAttribute="leading" constant="4" id="n6D-VW-Ytb"/>
                                                     <constraint firstAttribute="trailing" secondItem="1HU-Wb-ILi" secondAttribute="trailing" id="nCa-6V-5ne"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選擇車種" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aE-NV-aAO">
-                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="16"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <rect key="frame" x="187.5" y="5" width="187.5" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="TJf-uk-jyL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -326,7 +353,7 @@
                                             <constraint firstItem="RA2-hp-OPn" firstAttribute="width" secondItem="hPy-w6-JVd" secondAttribute="width" multiplier="0.5" id="9uN-F8-jhP"/>
                                             <constraint firstItem="5aE-NV-aAO" firstAttribute="leading" secondItem="RA2-hp-OPn" secondAttribute="trailing" id="LSn-8P-qUz"/>
                                             <constraint firstAttribute="bottom" secondItem="RA2-hp-OPn" secondAttribute="bottom" id="RmN-wE-Zjf"/>
-                                            <constraint firstItem="5aE-NV-aAO" firstAttribute="top" secondItem="hPy-w6-JVd" secondAttribute="top" id="abP-bL-amc"/>
+                                            <constraint firstItem="5aE-NV-aAO" firstAttribute="top" secondItem="hPy-w6-JVd" secondAttribute="top" constant="5" id="abP-bL-amc"/>
                                             <constraint firstAttribute="height" constant="20" id="gAZ-Ul-d5X"/>
                                             <constraint firstAttribute="trailing" secondItem="5aE-NV-aAO" secondAttribute="trailing" id="lo8-8f-pJ0"/>
                                             <constraint firstItem="RA2-hp-OPn" firstAttribute="leading" secondItem="hPy-w6-JVd" secondAttribute="leading" id="tFq-N4-8Zh"/>
@@ -338,26 +365,20 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0g-NO-Ue6">
                                                 <rect key="frame" x="0.0" y="0.0" width="187.5" height="50"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HX2-pV-hjP">
-                                                        <rect key="frame" x="8" y="4" width="171.5" height="42"/>
-                                                        <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
                                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mvy-gn-CdK">
-                                                        <rect key="frame" x="10" y="4" width="168" height="42"/>
+                                                        <rect key="frame" x="10" y="0.0" width="157.5" height="50"/>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="mZK-2i-sse" id="aJ6-gA-r3L"/>
+                                                            <outlet property="delegate" destination="mZK-2i-sse" id="ijB-lv-pZP"/>
+                                                        </connections>
                                                     </pickerView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="HX2-pV-hjP" secondAttribute="bottom" constant="4" id="0E7-Gm-QSm"/>
-                                                    <constraint firstItem="Mvy-gn-CdK" firstAttribute="top" secondItem="g0g-NO-Ue6" secondAttribute="top" constant="4" id="CjY-DN-YN6"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Mvy-gn-CdK" secondAttribute="trailing" constant="10" id="K2B-Y7-GNa"/>
-                                                    <constraint firstItem="HX2-pV-hjP" firstAttribute="leading" secondItem="g0g-NO-Ue6" secondAttribute="leading" constant="8" id="V7o-Jd-4cw"/>
+                                                    <constraint firstItem="Mvy-gn-CdK" firstAttribute="top" secondItem="g0g-NO-Ue6" secondAttribute="top" id="CjY-DN-YN6"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Mvy-gn-CdK" secondAttribute="trailing" constant="20" symbolic="YES" id="K2B-Y7-GNa"/>
                                                     <constraint firstItem="Mvy-gn-CdK" firstAttribute="leading" secondItem="g0g-NO-Ue6" secondAttribute="leading" constant="10" id="ZNZ-kK-KGJ"/>
-                                                    <constraint firstItem="HX2-pV-hjP" firstAttribute="top" secondItem="g0g-NO-Ue6" secondAttribute="top" constant="4" id="ZqL-Uv-vWs"/>
-                                                    <constraint firstAttribute="trailing" secondItem="HX2-pV-hjP" secondAttribute="trailing" constant="8" id="c3O-fM-drs"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Mvy-gn-CdK" secondAttribute="bottom" constant="4" id="hVu-L1-Ffd"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Mvy-gn-CdK" secondAttribute="bottom" id="hVu-L1-Ffd"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="II0-PL-xWh">
@@ -365,6 +386,10 @@
                                                 <subviews>
                                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D9W-Fn-Kgq">
                                                         <rect key="frame" x="0.0" y="0.0" width="187" height="50"/>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="mZK-2i-sse" id="ZTJ-Ph-Sux"/>
+                                                            <outlet property="delegate" destination="mZK-2i-sse" id="qIP-RB-rgA"/>
+                                                        </connections>
                                                     </pickerView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -394,33 +419,31 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="輸入車號" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uc9-JH-3GS">
                                                 <rect key="frame" x="0.0" y="0.0" width="179.5" height="20"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fb-jS-RNv">
                                                 <rect key="frame" x="179.5" y="0.0" width="179.5" height="20"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4z-9b-J64">
-                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="20" id="I5c-OW-AN0"/>
-                                                            <constraint firstAttribute="width" constant="20" id="WfA-eC-uF7"/>
-                                                        </constraints>
-                                                        <state key="normal" title="按鈕" image="icon_checkbox_off"/>
-                                                    </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="加入常用車號" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paa-2z-tmB">
-                                                        <rect key="frame" x="24" y="0.0" width="155.5" height="20"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <rect key="frame" x="35" y="0.0" width="144.5" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_checkbox_ov" translatesAutoresizingMaskIntoConstraints="NO" id="7wD-bF-bmM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="IBl-uo-E5t"/>
+                                                        </constraints>
+                                                    </imageView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="U4z-9b-J64" secondAttribute="bottom" id="13a-XW-ezq"/>
-                                                    <constraint firstItem="paa-2z-tmB" firstAttribute="leading" secondItem="U4z-9b-J64" secondAttribute="trailing" constant="4" id="4z4-qN-yIZ"/>
-                                                    <constraint firstItem="U4z-9b-J64" firstAttribute="top" secondItem="9fb-jS-RNv" secondAttribute="top" id="9bC-sI-xMO"/>
-                                                    <constraint firstItem="U4z-9b-J64" firstAttribute="leading" secondItem="9fb-jS-RNv" secondAttribute="leading" id="HLo-Qv-rVN"/>
+                                                    <constraint firstItem="7wD-bF-bmM" firstAttribute="leading" secondItem="9fb-jS-RNv" secondAttribute="leading" id="H6y-9p-sM8"/>
+                                                    <constraint firstItem="7wD-bF-bmM" firstAttribute="top" secondItem="9fb-jS-RNv" secondAttribute="top" id="Lrw-Kn-94u"/>
+                                                    <constraint firstItem="paa-2z-tmB" firstAttribute="leading" secondItem="7wD-bF-bmM" secondAttribute="trailing" constant="15" id="Rib-Nl-AJZ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="7wD-bF-bmM" secondAttribute="bottom" id="nbq-px-Cu1"/>
                                                     <constraint firstAttribute="bottom" secondItem="paa-2z-tmB" secondAttribute="bottom" id="uea-Px-qnb"/>
                                                     <constraint firstItem="paa-2z-tmB" firstAttribute="top" secondItem="9fb-jS-RNv" secondAttribute="top" id="x9Y-gS-c9h"/>
                                                     <constraint firstAttribute="trailing" secondItem="paa-2z-tmB" secondAttribute="trailing" id="zhV-Io-zRm"/>
@@ -496,6 +519,12 @@
                         <viewLayoutGuide key="safeArea" id="lsB-rm-zmH"/>
                     </view>
                     <navigationItem key="navigationItem" title="生活繳費" id="xJ9-Cb-gmo"/>
+                    <connections>
+                        <outlet property="addCarNoBtn" destination="7wD-bF-bmM" id="rcx-R3-nVa"/>
+                        <outlet property="cityPick" destination="Mvy-gn-CdK" id="ltH-Yx-R27"/>
+                        <outlet property="trafficKind" destination="D9W-Fn-Kgq" id="Iu7-PJ-8Vt"/>
+                        <outlet property="trafficNo" destination="Tjo-N5-V9e" id="ixf-sC-qBh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uil-a5-l3o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1973,6 +2002,7 @@
         <image name="blue_stare" width="22" height="21"/>
         <image name="cms_location" width="10" height="12"/>
         <image name="icon_checkbox_off" width="24" height="24"/>
+        <image name="icon_checkbox_ov" width="24" height="24"/>
         <image name="icon_detail_web" width="72" height="72"/>
         <image name="icon_pay_select_next" width="10" height="20"/>
     </resources>

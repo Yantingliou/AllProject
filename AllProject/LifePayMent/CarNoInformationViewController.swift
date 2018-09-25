@@ -37,4 +37,8 @@ class CarNoInformationViewController: UIViewController {
     }
     */
 
+    /*
+     這一頁內容主要是提供 該車號可以繳費的車單
+     幾月幾號 到期日 多少錢  可以勾選 多選繳費還是 單選繳費
+     */
 }
